@@ -19,7 +19,8 @@ gulp.task('img', function() {
 			gutil.log(gutil.colors.red(error.message));
 			this.emit('end');
 		}))
-		.pipe(cache(
+		.pipe(
+			// cache(
 			imagemin({
 				progressive: true,
 				svgoPlugins: [{
@@ -29,7 +30,8 @@ gulp.task('img', function() {
 				use: [pngquant()],
 				interlaced: true
 			})
-		))
+			// )
+		)
 		.pipe(size({
 			title: 'images'
 		}))
