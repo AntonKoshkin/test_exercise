@@ -1,7 +1,7 @@
 body
+	box-sizing border-box
 	background-color lightgray
 	font-family 'Roboto', sans-serif
-	box-sizing border-box
 
 *
 	box-sizing inherit
@@ -9,40 +9,40 @@ body
 .hello
 	&__title
 		margin 65px 0
-		font-weight 500
 		font-size fz-big
+		font-weight 500
 		letter-spacing 3px
 
 		&--icon
 			&:before
-				content ''
 				display inline-block
 				width 44px
 				height 42px
+				margin-right 5px
+				content ''
 				background-image url(../img/october.png)
 				background-repeat no-repeat
 				background-position center
-				margin-right 5px
 
 .item
-	text-align center
-	margin-bottom 35px
 	position relative
 	top 0
 	width 100%
+	margin-bottom 35px
+	text-align center
 
 	&__face
-		background-color white
-		height 292px
-		overflow hidden
-		margin-bottom 15px
 		position relative
+		height 292px
+		margin-bottom 15px
+		background-color white
+		overflow hidden
 		
 		&:before
-			content ''
 			display inline-block
 			width 0
 			height 100%
+			content ''
 			vertical-align middle
 	
 	&__img
@@ -50,6 +50,7 @@ body
 
 	&__index
 		position absolute
+		opacity 0
 
 		&--visible
 			display inline-block
@@ -57,65 +58,59 @@ body
 			right 0
 			bottom 0
 			left 0
-			margin auto
 			width 65px
 			height 65px
+			margin auto
 			font-size fz-big
 			font-weight 700
 			color white
 			line-height 65px
 			vertical-align middle
 			background-color rgba(red, .9)
-			opacity 0
+			opacity 1
 	
 	&__title
 		margin-bottom 10px
 		font-size fz-name
 	
 	&__desc
-		font-size fz-text
-		padding 0 20px
 		min-height 60px
+		padding 0 20px
+		font-size fz-text
 	
 	&__buy
 		width 100%
-		opacity 0
 		border-radius none
 		border none
+		background-color red
 		font-size fz-text
 		color white
 		font-weight 500
 		letter-spacing 2px
-		background-color red
 		text-transform uppercase
 		overflow hidden
+		opacity 0
 	
 	&:hover
-		width 116%
-		transition width .2s, height .2s, border .2s, padding .2s, background-color .2s, top .2s, box-shadow .2s
-		border 5px solid red
-		padding 20px
-		z-index 1
-		background-color white
 		position absolute
-		left 50%
 		top -25px
-		transform translate(-50%)
+		left -100px
+		right -100px
+		width 116%
+		margin auto
+		padding 20px
+		border 5px solid red
+		background-color white
 		box-shadow 0 6px 20px rgba(black, .2)
+		z-index 1
 		
 	&:hover &__desc
 		margin-bottom 20px
 		padding 0 32px
-		transition margin-bottom .2s
 	
 	&:hover &__buy
 		padding 15px
 		opacity 1
-		transition .2s
-
-.see
-	opacity 1
-	transition .3s
 
 .answer
 	margin-bottom 100px

@@ -585,12 +585,12 @@ td
 {
     body
     {
-        min-width: 1870px;
+        min-width: 1800px;
     }
     .container
     {
         box-sizing: border-box;
-        max-width: 1870px;
+        max-width: 1800px;
         padding-right: 12px;
         padding-left: 12px;
     }
@@ -801,6 +801,8 @@ body
 .item__index
 {
     position: absolute;
+
+    opacity: 0;
 }
 .item__index--visible
 {
@@ -821,7 +823,7 @@ body
 
     vertical-align: middle;
 
-    opacity: 0;
+    opacity: 1;
     color: #fff;
     background-color: rgba(213,34,61,.9);
 }
@@ -861,16 +863,12 @@ body
     position: absolute;
     z-index: 1;
     top: -25px;
-    left: 50%;
+    right: -100px;
+    left: -100px;
 
     width: 116%;
+    margin: auto;
     padding: 20px;
-
-    -webkit-transition: width .2s, height .2s, border .2s, padding .2s, background-color .2s, top .2s, box-shadow .2s;
-            transition: width .2s, height .2s, border .2s, padding .2s, background-color .2s, top .2s, box-shadow .2s;
-    -webkit-transform: translate(-50%);
-        -ms-transform: translate(-50%);
-            transform: translate(-50%);
 
     border: 5px solid #d5223d;
     background-color: #fff;
@@ -880,23 +878,10 @@ body
 {
     margin-bottom: 20px;
     padding: 0 32px;
-
-    -webkit-transition: margin-bottom .2s;
-            transition: margin-bottom .2s;
 }
 .item:hover .item__buy
 {
     padding: 15px;
-
-    -webkit-transition: .2s;
-            transition: .2s;
-
-    opacity: 1;
-}
-.see
-{
-    -webkit-transition: .3s;
-            transition: .3s;
 
     opacity: 1;
 }
